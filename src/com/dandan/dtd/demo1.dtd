@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  * 0个或者多个
+      ？ 0个或者一个
+      + 1个或多个 -->
+<!DOCTYPE note [
+    <!ELEMENT note  (one, two, three, four)>
+    <!ELEMENT one   (#PCDATA) >
+    <!ELEMENT two   EMPTY >
+    <!ATTLIST two
+        author CDATA #REQUIRED>
+    <!ELEMENT three (#PCDATA) >
+    <!ELEMENT four  (#PCDATA) >
+
+
+
+    <!ENTITY   "HuangDandan">
+]>
+
+
+

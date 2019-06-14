@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!ELEMENT mapper (cache-ref | cache | resultMap* | parameterMap* | sql* | insert* | update* | delete* | select* )+ >
+<!ATTLIST mapper
+    xmlns:fo CDATA #IMPLIED
+    namespace CDATA #IMPLIED>
+
+<!ELEMENT cache-ref EMPTY>
+<!ATTLIST cache-ref
+    namespace CDATA #REQUIRED>
+
+<!ELEMENT cache (property*)>
+<!ATTLIST cache
+    type CDATA #IMPLIED
+    eviction CDATA #IMPLIED
+    flushInterval CDATA #IMPLIED
+    size CDATA #IMPLIED
+    readOnly CDATA #IMPLIED
+    blocking CDATA #IMPLIED>
+
+
+<!ELEMENT resultMap (constructor?, id*, result*, association*, collection*, discriminator?)>
+<!ATTLIST resultMap
+    id CDATA #REQUIRED
+    type CDATA #REQUIRED
+    extends CDATA #IMPLIED
+    autoMapping (true|false) #IMPLIED>
+
+<!ELEMENT constructor (idArg*, arg*) >
+<!ELEMENT idArg EMPTY>
+<!ATTLIST idArg
+    javaType CDATA #IMPLIED
+    column CDATA #IMPLIED
+    jdbcType CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED
+    select CDATA #IMPLIED
+    resultMap CDATA #IMPLIED>
+<!ELEMENT arg EMPTY>
+<!ATTLIST arg
+    javaType CDATA #IMPLIED
+    colunm CDTAD #IMPLIED
+    jdbcType CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED
+    select CDATA #IMPLIED
+    resultMap CDATA #IMPLIED>
+
+<!ELEMENT id EMPTY>
+<!ATTLIST id
+    property CDATA #IMPLIED
+    javaType CDATA #IMPLIED
+    column CDATA #IMPLIED
+    jdbcType CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED>
+
+<!ELEMENT result EMPTY>
+<!ATTLIST result
+    property CDATA #IMPLIED
+    javaType CDATA #IMPLIED
+    column CDATA #IMPLIED
+    jdbcType CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED>
+<!ELEMENT association (constructor?, id*, result*, association*, collection*, discriminator?)>
+<!ATTLIST association
+    property CDATA #REQUIRED
+    column CDATA #IMPLIED
+    javaType CDATA #IMPLIED
+    jdbcType CDATA #IMPLIED
+    select CDATA #IMPLIED
+    resultMap CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED
+    notNullColumn CDATA #IMPLIED
+    columnPerfix CDATA #IMPLIED
+    resultSet CDATA #IMPLIED
+    foreignColumn CDATA #IMPLIED
+    autoMapping (true|false) #IMPLIED
+    fetchType (lazy|eager) #IMPLIED>
+
+<!ELEMENT collection (constructor?, id*, result*, association*, collection*, discriminator?)>
+<!ATTLIST collection
+    property CDATA #REQUIRED
+    column CDATA #IMPLIED
+    javaType CDATA #IMPLIED
+    ofType CDATA #IMPLIED
+    jdbcType CDATA #IMPLIED
+    select CDATA #IMPLIED
+    resultMap CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED
+    notNullColumn CDATA #IMPLIED
+    columnPerfix CDATA #IMPLIED
+    resultSet CDATA #IMPLIED
+    foreignColumn CDATA #IMPLIED
+    autoMapping (true|false) #IMPLIED
+    fetchType (lazy|eager) #IMPLIED>
+
+<!ELEMENT discriminator (case+)>
+<!ATTLIST discriminator
+    column CDATA #IMPLIED
+    javaType CDATA #REQUIRED
+    jdbcType CDATA #IMPLIED
+    typeHandler CDATA #IMPLIED>
+<!ELEMENT case (constructor?, id*, result*, association*, collection*, discriminator?)>
+<!ATTLIST case
+    value CDATA #REQUIRED
+    resultMap CDATA #IMPLIED
+    resultType CDATA #IMPLIED>
+
+
+
+
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+    name CDATA #REQUIRED
+    value CDATA #REQUIRED>

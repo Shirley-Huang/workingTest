@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "demo1.dtd">
+<note>
+    <one>111</one>
+    <two author="111"></two>
+    <three>333</three>
+    <four>444</four>
+</note>

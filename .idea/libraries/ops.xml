@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="ops">
+    <CLASSES>
+      <root url="file://F:/workSpacing/ops" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://F:/workSpacing/ops/business/common/src/main/java" />
+      <root url="file://F:/workSpacing/ops/business/scheduler/src/main/java" />
+      <root url="file://F:/workSpacing/ops/cache/server/src/main/java" />
+      <root url="file://F:/workSpacing/ops/data/cache/src/main/java" />
+      <root url="file://F:/workSpacing/ops/data/common/src/main/java" />
+      <root url="file://F:/workSpacing/ops/data/dao/src/main/java" />
+      <root url="file://F:/workSpacing/ops/data/dao/src/test/java" />
+      <root url="file://F:/workSpacing/ops/remote/src/main/java" />
+      <root url="file://F:/workSpacing/ops/webapp/admin/src/main/java" />
+      <root url="file://F:/workSpacing/ops/webapp/app/src/main/java" />
+      <root url="file://F:/workSpacing/ops/webapp/service/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
